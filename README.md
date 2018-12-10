@@ -40,13 +40,23 @@ File-->Settings-->Plugins-->菊花图案-->Install plugin from Disk...-->选择j
 
 ## todo list
 
-- [ ] 对于功能1-3, 目前只支持多行注释的复制,对于单号注释还不支持。Jpa如果没有注释，在定义表字段上的注释，复制过来
+- [ ] 对于功能1-3, 目前只支持多行注释的复制,对于单号注释还不支持。Jpa如果没有注释，在定义表字段上的注释，复制过来。
 
-- [ ] 实现dubbo测试工具：测试本地或者远程启动的dubbo提供者，根据provider中的方法及入参
+- [ ] 实现dubbo测试工具：测试本地或者远程启动的dubbo提供者，根据provider中的方法及入参。
 
 - [ ] 模板代码生成如图
 
-      ![]()
+      ![readme\todo_genCode](readme\todo_genCode.gif)
+
+      
+
+- [ ] 还有Jpa和Mybatis代码生成。。。
+
+
+
+## 欢迎提各种问题
+
+lijian79@gmail.com
 
 
 
