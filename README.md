@@ -16,7 +16,7 @@ File-->Settings-->Plugins-->菊花图案-->Install plugin from Disk...-->选择j
 
    方法: 光标在类的代码上-->Code-->Generate-->Generate Builder
 
-   ![readme\genBuilder](readme\genBuilder.gif)
+   ![readme\genBuilder](./readme/genBuilder.gif)
 
 2.根据类定义,生成该类Builder方法(递归所以包含的类对象)如图:
 
@@ -30,11 +30,11 @@ File-->Settings-->Plugins-->菊花图案-->Install plugin from Disk...-->选择j
 
 光标在类的代码上(或者类对象上)-->Code-->Generate-->Generate Builder-->Generate all set
 
-![readme\genGeter1](readme\genGeter1.gif)
+![readme\genGeter1](./readme/genGeter1.gif)
 
 
 
-![readme\genGeter2](readme\genGeter2.gif)
+![readme\genGeter2](./readme/genGeter2.gif)
 
 
 
@@ -46,7 +46,7 @@ File-->Settings-->Plugins-->菊花图案-->Install plugin from Disk...-->选择j
 
 - [ ] 模板代码生成如图
 
-      ![readme\todo_genCode](readme\todo_genCode.gif)
+![readme\todo_genCode](./readme/todo_genCode.gif)
 
       
 
