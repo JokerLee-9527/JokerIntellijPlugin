@@ -1,10 +1,9 @@
 # Joker Intellij Plugin
 
 ## 安装方法
-
-在线安装:
+1. 在线安装:
 File-->Settings-->Plugins-->搜索Joker
-本地安装:
+2. 本地安装:
 File-->Settings-->Plugins-->菊花图案-->Install plugin from Disk...-->选择joker.zip-->重启Intellij
 
 ![](./readme/install_plugin.gif)
