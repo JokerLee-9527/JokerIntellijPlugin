@@ -2,8 +2,9 @@
 
 ## 安装方法
 
-目前只支持本地安装,比较成熟后准备放到插件官网
-
+在线安装:
+File-->Settings-->Plugins-->搜索Joker
+本地安装:
 File-->Settings-->Plugins-->菊花图案-->Install plugin from Disk...-->选择joker.zip-->重启Intellij
 
 ![](./readme/install_plugin.gif)
