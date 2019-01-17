@@ -11,6 +11,7 @@ package com.joker.plugin.dubbo.consumer.web;
 * @Version:        1.0
 */
 import com.joker.plugin.dubbo.api.DemoServiceProvider;
+import com.joker.plugin.dubbo.api.demain.UserProfile;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,6 +26,11 @@ public class DemoConsumerController {
 
     @RequestMapping("/sayHello")
     public String sayHello(@RequestParam String name) {
-        return demoService.sayHello(name);
+        UserProfile userProfile = UserProfile.builder()
+                .logo("testLogo")
+                .nickName("testNickName")
+                .birthday("testBirthday")
+                .build();
+        return demoService.sayHello(userProfile,name);
     }
 }

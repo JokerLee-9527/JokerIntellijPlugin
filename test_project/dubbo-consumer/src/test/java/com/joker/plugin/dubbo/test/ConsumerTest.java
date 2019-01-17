@@ -27,6 +27,6 @@ public class ConsumerTest {
 
     @Test
     public void sayHello(){
-        consumerDemoService.sayHello("Hello!");
+        consumerDemoService.sayHello("Joker");
     }
 }

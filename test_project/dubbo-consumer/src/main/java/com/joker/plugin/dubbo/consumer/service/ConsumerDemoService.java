@@ -1,6 +1,7 @@
 package com.joker.plugin.dubbo.consumer.service;
 
 import com.joker.plugin.dubbo.api.DemoServiceProvider;
+import com.joker.plugin.dubbo.api.demain.UserProfile;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +22,12 @@ public class ConsumerDemoService {
     private DemoServiceProvider demoServiceProvider;
 
     public void sayHello(String name) {
-        String hello = demoServiceProvider.sayHello(name); // 执行消费远程方法
+        UserProfile userProfile = UserProfile.builder()
+                .logo("testLogo")
+                .nickName("testNickName")
+                .birthday("testBirthday")
+                .build();
+        String hello = demoServiceProvider.sayHello(userProfile,name); // 执行消费远程方法
         System.out.println(hello); // 显示调用结果
     }
 

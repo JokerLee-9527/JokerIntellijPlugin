@@ -1,5 +1,7 @@
 package com.joker.plugin.dubbo.api;
 
+import com.joker.plugin.dubbo.api.demain.UserProfile;
+
 /**
 * @Description:    定义服务接口
 *
@@ -12,6 +14,6 @@ package com.joker.plugin.dubbo.api;
 */
 public interface DemoServiceProvider {
 	
-    String sayHello(String name);
+    String sayHello(UserProfile userProfile,String name);
 }
 

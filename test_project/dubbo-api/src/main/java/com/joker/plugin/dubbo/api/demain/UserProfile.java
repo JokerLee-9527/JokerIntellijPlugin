@@ -2,6 +2,8 @@ package com.joker.plugin.dubbo.api.demain;
 
 import lombok.*;
 
+import java.io.Serializable;
+
 /**
 * @Description:    会员概要 信息
 *
@@ -17,8 +19,7 @@ import lombok.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserProfile {
-
+public class UserProfile implements Serializable {
     private static final long serialVersionUID = 8840160773006888780L;
 
     //头像 
