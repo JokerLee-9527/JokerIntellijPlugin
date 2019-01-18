@@ -22,15 +22,33 @@ import java.util.Date;
 public class DemoServiceProviderImpl implements DemoServiceProvider {
 
     @Override
-    public String sayHello( UserProfile userProfile,String name) {
+    public String sayHello(UserProfile userProfile, String name) {
 
         String nickNmae = "nikeName:null";
         if (null != userProfile && StringUtils.isNotEmpty(userProfile.getNickName())) {
             nickNmae = "nickName:" + userProfile.getNickName();
         }
 
-        System.out.println("[" + new SimpleDateFormat("HH:mm:ss").format(new Date()) + "] Hello " + name + "(" + nickNmae +")" + ", request from consumer: " + RpcContext.getContext().getRemoteAddress());
-        return "Hello " + name +  "(" + nickNmae +")" + ", response form provider: " + RpcContext.getContext().getLocalAddress() ;
+        System.out.println("[" + new SimpleDateFormat("HH:mm:ss").format(new Date()) + "] Hello " + name + "(" + nickNmae + ")" + ", request from consumer: " + RpcContext.getContext().getRemoteAddress());
+        return "Hello " + name + "(" + nickNmae + ")" + ", response form provider: " + RpcContext.getContext().getLocalAddress();
+    }
+
+    @Override
+    public String sayHello1(UserProfile userProfile) {
+        String nickNmae = "nikeName:null";
+        if (null != userProfile && StringUtils.isNotEmpty(userProfile.getNickName())) {
+            nickNmae = "nickName:" + userProfile.getNickName();
+        }
+
+        System.out.println("[" + new SimpleDateFormat("HH:mm:ss").format(new Date()) + "] Hello " + "(" + nickNmae + ")" + ", request from consumer: " + RpcContext.getContext().getRemoteAddress());
+        return "Hello " + "(" + nickNmae + ")" + ", response form provider: " + RpcContext.getContext().getLocalAddress();
+    }
+
+    @Override
+    public String sayHello2(String name) {
+
+        System.out.println("[" + new SimpleDateFormat("HH:mm:ss").format(new Date()) + "] Hello " + name + ", request from consumer: " + RpcContext.getContext().getRemoteAddress());
+        return "Hello " + name + ", response form provider: " + RpcContext.getContext().getLocalAddress();
     }
 
 }

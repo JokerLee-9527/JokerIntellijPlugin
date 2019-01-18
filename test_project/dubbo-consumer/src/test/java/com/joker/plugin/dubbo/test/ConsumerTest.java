@@ -29,4 +29,14 @@ public class ConsumerTest {
     public void sayHello(){
         consumerDemoService.sayHello("Joker");
     }
+
+    @Test
+    public void sayHello1(){
+        consumerDemoService.sayHello1();
+    }
+
+    @Test
+    public void sayHello2(){
+        consumerDemoService.sayHello2();
+    }
 }

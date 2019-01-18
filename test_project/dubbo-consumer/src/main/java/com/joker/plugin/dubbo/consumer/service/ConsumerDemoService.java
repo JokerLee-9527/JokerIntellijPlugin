@@ -31,4 +31,22 @@ public class ConsumerDemoService {
         System.out.println(hello); // 显示调用结果
     }
 
+    public void sayHello1() {
+        UserProfile userProfile = UserProfile.builder()
+                .logo("testLogo")
+                .nickName("testNickName")
+                .birthday("testBirthday")
+                .build();
+        String hello = demoServiceProvider.sayHello1(userProfile); // 执行消费远程方法
+        System.out.println(hello); // 显示调用结果
+    }
+
+    public void sayHello2() {
+
+        String hello = demoServiceProvider.sayHello2("NAME"); // 执行消费远程方法
+        System.out.println(hello); // 显示调用结果
+    }
+
+
+
 }
