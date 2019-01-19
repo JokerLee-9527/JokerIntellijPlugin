@@ -19,5 +19,9 @@ public interface DemoServiceProvider {
 
     String sayHello2(String name);
 
+    String sayHello3(Integer param);
+
+    String sayHello4(int param);
+
 }
 

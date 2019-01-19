@@ -51,4 +51,16 @@ public class DemoServiceProviderImpl implements DemoServiceProvider {
         return "Hello " + name + ", response form provider: " + RpcContext.getContext().getLocalAddress();
     }
 
+    @Override
+    public String sayHello3(Integer param) {
+        System.out.println("[" + new SimpleDateFormat("HH:mm:ss").format(new Date()) + "] Hello " + param + ", request from consumer: " + RpcContext.getContext().getRemoteAddress());
+        return "Hello " + param + ", response form provider: " + RpcContext.getContext().getLocalAddress();
+    }
+
+    @Override
+    public String sayHello4(int param) {
+        System.out.println("[" + new SimpleDateFormat("HH:mm:ss").format(new Date()) + "] Hello " + param + ", request from consumer: " + RpcContext.getContext().getRemoteAddress());
+        return "Hello " + param + ", response form provider: " + RpcContext.getContext().getLocalAddress();
+    }
+
 }
