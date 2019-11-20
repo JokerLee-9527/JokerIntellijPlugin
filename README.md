@@ -61,9 +61,11 @@
 
 ## 修复的bug (当前最高版本0.3)
 
-1. 0.02修改的bug:
+1. 0.3 修改的bug:(2019-11-20)
 
-   - 高版本intellij 中generate all set 功能无法使用
+   - 高版本Intellij 中generate all set 功能无法使用
+   - 低版本Intellij 无法安装插件的问题
+   - dubbo测试工具中文乱码的问题
 
 
 
