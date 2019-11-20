@@ -1,0 +1,45 @@
+version: '2.1'
+# 注意版本 version: '2'不支持变量 ${DOCKER_HOST_IP:-127.0.0.1}
+
+services:
+
+  zoo1:
+    image: zookeeper:3.4.9
+    hostname: zoo1
+    ports:
+      - "2181:2181"
+    environment:
+      ZOO_MY_ID: 1
+      ZOO_PORT: 2181
+      ZOO_SERVERS: server.1=zoo1:2888:3888 server.2=zoo2:2888:3888 server.3=zoo3:2888:3888
+    volumes:
+      - ./docker_data/zookeeper/zoo1/data:/data
+      - ./docker_data/zookeeper/zoo1/datalog:/datalog
+
+  zoo2:
+    image: zookeeper:3.4.9
+    hostname: zoo2
+    ports:
+      - "2182:2182"
+    environment:
+      ZOO_MY_ID: 2
+      ZOO_PORT: 2182
+      ZOO_SERVERS: server.1=zoo1:2888:3888 server.2=zoo2:2888:3888 server.3=zoo3:2888:3888
+    volumes:
+      - ./docker_data/zookeeper/zoo2/data:/data
+      - ./docker_data/zookeeper/zoo2/datalog:/datalog
+
+  zoo3:
+    image: zookeeper:3.4.9
+    hostname: zoo3
+    ports:
+      - "2183:2183"
+    environment:
+      ZOO_MY_ID: 3
+      ZOO_PORT: 2183
+      ZOO_SERVERS: server.1=zoo1:2888:3888 server.2=zoo2:2888:3888 server.3=zoo3:2888:3888
+    volumes:
+      - ./docker_data/zookeeper/zoo3/data:/data
+      - ./docker_data/zookeeper/zoo3/datalog:/datalog
+
+
